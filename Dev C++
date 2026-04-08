@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string nama, nim, jurusan;
+    int semester;
+    int spp, sks, biaya_sks, praktikum, ict;
+    int total_sks, total_bayar;
+    // Input data mahasiswa
+    cout << "===== PEMBAYARAN UANG KULIAH =====" << endl;
+    cout << "Nama Mahasiswa        = ";
+    getline(cin, nama);
+    cout << "NIM                   = ";
+    cin >> nim;
+    cout << "Jurusan               = ";
+    cin >> jurusan;
+    cout << "Semester              = ";
+    cin >> semester;
+    // Input biaya
+    cout << "Biaya SPP             = ";
+    cin >> spp;
+    cout << "Jumlah SKS            = ";
+    cin >> sks;
+    cout << "Biaya per SKS         = ";
+    cin >> biaya_sks;
+    cout << "Biaya Praktikum       = ";
+    cin >> praktikum;
+    cout << "Biaya Ict       = ";
+    cin >> ict;
+
+
+    // Proses perhitungan
+    total_sks = sks * biaya_sks;
+    total_bayar = spp + total_sks + praktikum + ict;
+    // Output hasil
+    cout << "\n===== STRUK PEMBAYARAN =====" << endl;
+    cout << "Nama Mahasiswa  : " << nama << endl;
+    cout << "NIM             : " << nim << endl;
+    cout << "Jurusan         : " << jurusan << endl;
+    cout << "Semester        : " << semester << endl;
+    cout << "Total SKS       : " << total_sks << endl;
+    cout << "Total Bayar     : Rp " << total_bayar << endl;
+    return 0;
+}
